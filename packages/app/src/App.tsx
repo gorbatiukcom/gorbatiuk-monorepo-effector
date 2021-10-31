@@ -5,12 +5,13 @@ import {
   Platform,
   SafeAreaView,
   StyleSheet,
-  Text,
+  Text as TextRN,
   View,
 } from "react-native";
 import { AsyncStorageExample } from "./AsyncStorageExample";
 import { subplatform } from "./config";
 import LogoSrc from "./logo.png";
+import { Text } from "@my-app/core-ui";
 
 export function App(): JSX.Element {
   const platformValue = subplatform
@@ -22,11 +23,11 @@ export function App(): JSX.Element {
           complains about the image type, so we cast it as a workaround  */}
       <Image style={styles.logo} source={LogoSrc as ImageSourcePropType} />
       <Text style={styles.text}>Hello from Oleg!</Text>
-      <Text style={styles.text}>& React Native</Text>
+      <TextRN style={styles.text}>& React Native</TextRN>
       <View style={styles.platformRow}>
-        <Text style={styles.text}>Platform: </Text>
+        <TextRN style={styles.text}>Platform: </TextRN>
         <View style={styles.platformBackground}>
-          <Text style={styles.platformValue}>{platformValue}</Text>
+          <TextRN style={styles.platformValue}>{platformValue}</TextRN>
         </View>
       </View>
       <AsyncStorageExample />
