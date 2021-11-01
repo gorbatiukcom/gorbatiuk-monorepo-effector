@@ -4,12 +4,14 @@ const path = require("path");
 const exclusionList = require("metro-config/src/defaults/exclusionList");
 const {
   getMetroTools,
-  getMetroAndroidAssetsResolutionFix,
+  // getMetroAndroidAssetsResolutionFix,
 } = require("react-native-monorepo-tools");
 
 const monorepoMetroTools = getMetroTools();
 
-const androidAssetsResolutionFix = getMetroAndroidAssetsResolutionFix();
+// TODO: understand the source code
+// androidAssetsResolutionFix — fixed problems on Android but it breaks Expo assets
+// const androidAssetsResolutionFix = getMetroAndroidAssetsResolutionFix();
 
 const config = getDefaultConfig(__dirname);
 const projectRoot = __dirname;
@@ -18,7 +20,7 @@ const workspaceRoot = path.resolve(__dirname, "../..");
 config.transformer = {
   ...config.transformer,
   // Apply the Android assets resolution fix to the public path...
-  publicPath: androidAssetsResolutionFix.publicPath,
+  // publicPath: androidAssetsResolutionFix.publicPath,
   getTransformOptions: async () => ({
     transform: {
       experimentalImportSupport: false,
@@ -29,9 +31,9 @@ config.transformer = {
 config.server = {
   ...config.server,
   // ...and to the server middleware.
-  enhanceMiddleware: (middleware) => {
-    return androidAssetsResolutionFix.applyMiddleware(middleware);
-  },
+  // enhanceMiddleware: (middleware) => {
+  //   return androidAssetsResolutionFix.applyMiddleware(middleware);
+  // },
 };
 config.watchFolders = [workspaceRoot, ...monorepoMetroTools.watchFolders];
 config.resolver = {
