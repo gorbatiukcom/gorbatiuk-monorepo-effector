@@ -14,11 +14,18 @@
       "**/react-native",
       "**/react-native/**",
       "**/react-native-codegen",
-      "**/react-native-dev-menu"
+      "**/react-native-dev-menu",
+      "**/expo",
+      "**/expo/**",
+      "**/expo**"
     ]
   },
   "scripts": {
     "reset": "find . -type dir -name node_modules | xargs rm -rf && rm -rf yarn.lock",
+    "expo:start": "yarn workspace @my-app/expo start",
+    "next:start": "yarn workspace @my-app/next dev",
+    "next:build": "yarn workspace @my-app/next build",
+    "next:serve": "yarn workspace @my-app/next start",
     "android:metro": "yarn workspace @my-app/mobile start",
     "android:start": "yarn workspace @my-app/mobile android",
     "android:studio": "yarn workspace @my-app/mobile studio",
@@ -26,9 +33,6 @@
     "ios:start": "yarn workspace @my-app/mobile ios",
     "ios:xcode": "yarn workspace @my-app/mobile xcode",
     "ios:pods": "yarn workspace @my-app/mobile pods",
-    "next:start": "yarn workspace @my-app/next dev",
-    "next:build": "yarn workspace @my-app/next build",
-    "next:serve": "yarn workspace @my-app/next start",
     "lint": "ultra -r lint",
     "lint:fix": "ultra -r lint:fix",
     "test": "ultra -r test",
@@ -41,6 +45,7 @@
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-react-app": "^6.2.2",
     "eslint-plugin-react-native": "^3.11.0",
+    "expo-yarn-workspaces": "^1.6.0",
     "prettier": "^2.3.2",
     "typescript": "^4.4.2",
     "ultra-runner": "^3.10.5"

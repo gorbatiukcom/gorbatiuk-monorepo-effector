@@ -8,10 +8,10 @@ import {
   Text as TextRN,
   View,
 } from "react-native";
-import { AsyncStorageExample } from "./AsyncStorageExample";
 import { subplatform } from "./config";
 import LogoSrc from "./logo.png";
 import { Text } from "@my-app/core-ui";
+// import { AsyncStorageExample } from "./AsyncStorageExample";
 
 export function App(): JSX.Element {
   const platformValue = subplatform
@@ -30,7 +30,7 @@ export function App(): JSX.Element {
           <TextRN style={styles.platformValue}>{platformValue}</TextRN>
         </View>
       </View>
-      <AsyncStorageExample />
+      {/* <AsyncStorageExample /> */}
     </SafeAreaView>
   );
 }
