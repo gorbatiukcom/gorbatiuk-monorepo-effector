@@ -8,5 +8,5 @@
 * RN
 
 # Features
-* nohoistsupport
+* nohoist support
 * components based on styled-components + styled-system 
