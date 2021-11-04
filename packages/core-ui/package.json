@@ -18,9 +18,6 @@
     "@types/styled-system": "^5.1.13"
   },
   "peerDependencies": {
-    "@emotion/native": "*",
-    "@emotion/react": "*",
-    "@emotion/styled": "*",
     "react": "*",
     "react-native": "*",
     "styled-components": "*",

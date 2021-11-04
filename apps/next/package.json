@@ -9,11 +9,10 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@emotion/react": "^11.5.0",
-    "@emotion/styled": "^11.3.0",
     "@my-app/app": "*",
     "@my-app/core-ui": "*",
-    "add": "^2.0.6",
+    "effector": "^22.1.2",
+    "effector-react": "^22.0.4",
     "next": "11.1.2",
     "next-fonts": "^1.5.1",
     "next-images": "^1.8.1",
@@ -23,8 +22,7 @@
     "react-native-web": "^0.17.1",
     "setimmediate": "^1.0.5",
     "styled-components": "^5.3.3",
-    "styled-system": "^5.1.5",
-    "yarn": "^1.22.17"
+    "styled-system": "^5.1.5"
   },
   "devDependencies": {
     "@types/react": "17.0.24",
