@@ -19,7 +19,9 @@
       "**/expo/**",
       "**/expo**",
       "**/styled-components",
-      "**/styled-components/**"
+      "**/styled-components/**",
+      "**/effector-react",
+      "**/effector-react/**"
     ]
   },
   "scripts": {

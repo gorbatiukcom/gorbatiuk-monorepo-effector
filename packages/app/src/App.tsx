@@ -11,6 +11,7 @@ import {
 import { subplatform } from "./config";
 import LogoSrc from "./logo.png";
 import { Text } from "@my-app/core-ui";
+import { EffectorExample } from "./EffectorExample";
 // import { AsyncStorageExample } from "./AsyncStorageExample";
 
 export function App(): JSX.Element {
@@ -39,6 +40,7 @@ export function App(): JSX.Element {
           <TextRN style={styles.platformValue}>{platformValue}</TextRN>
         </View>
       </View>
+      <EffectorExample />
       {/* <AsyncStorageExample /> */}
     </SafeAreaView>
   );
