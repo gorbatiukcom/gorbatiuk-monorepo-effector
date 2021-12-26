@@ -31,7 +31,7 @@ export function App(): JSX.Element {
         my={[5, 10]}
         p={2}
       >
-        Hello from Oleg!
+        Hello from Oleg (:
       </Text>
       <TextRN style={styles.text}>& React Native</TextRN>
       <View style={styles.platformRow}>
