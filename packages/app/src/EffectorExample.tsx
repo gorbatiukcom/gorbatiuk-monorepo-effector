@@ -29,7 +29,7 @@ const updateCountInAsyncStorageFx = createEffect({
   },
 });
 
-fetchCountFromAsyncStorageFx.doneData.watch((result) => {
+fetchCountFromAsyncStorageFx.doneData.watch((result: any) => {
   init(result);
 });
 
@@ -52,13 +52,28 @@ export const EffectorExample = () => {
     <View style={styles.container}>
       <Text style={styles.paragraph}>{count}</Text>
       <View style={styles.buttons}>
-        <TouchableOpacity key="dec" onPress={decrement} style={styles.button}>
+        <TouchableOpacity
+          key="dec"
+          // @ts-expect-error :((
+          onPress={decrement}
+          style={styles.button}
+        >
           <Text style={styles.label}>-</Text>
         </TouchableOpacity>
-        <TouchableOpacity key="reset" onPress={reset} style={styles.button}>
+        <TouchableOpacity
+          key="reset"
+          // @ts-expect-error :((
+          onPress={reset}
+          style={styles.button}
+        >
           <Text style={styles.label}>0</Text>
         </TouchableOpacity>
-        <TouchableOpacity key="inc" onPress={increment} style={styles.button}>
+        <TouchableOpacity
+          key="inc"
+          // @ts-expect-error :((
+          onPress={increment}
+          style={styles.button}
+        >
           <Text style={styles.label}>+</Text>
         </TouchableOpacity>
       </View>
