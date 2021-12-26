@@ -93,7 +93,7 @@ export const iconButtonSettings = {
   },
 };
 
-export const buttons = {
+const variants = {
   green: filledButtonSettings,
   greenGradient: filledButtonSettings,
   black: filledButtonSettings,
@@ -108,3 +108,10 @@ export const buttons = {
   withIconBlack: withIconButtonSettings,
   withIconGreen: withIconButtonSettings,
 };
+
+export const Button = {
+  // baseStyle,
+  variants,
+  // sizes,
+  // defaultProps,
+}

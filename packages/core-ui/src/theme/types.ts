@@ -1,4 +1,4 @@
-import { colors, gradients } from "./colors";
+import { colors, gradients } from "./foundations/colors";
 import { theme } from "./theme";
 
 // export type FontFamily = keyof typeof defaultTheme.fonts;

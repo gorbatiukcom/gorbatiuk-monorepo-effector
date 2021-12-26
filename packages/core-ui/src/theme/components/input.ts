@@ -1,4 +1,4 @@
-export const inputs = {
+const variants = {
   normal: {
     py: {
       xs: "0px",
@@ -36,3 +36,16 @@ export const inputs = {
     },
   },
 };
+
+const defaultProps = {
+  size: "m",
+  variant: "normal",
+}
+
+export const Input = {
+  // parts: parts.keys,
+  // baseStyle,
+  // sizes,
+  variants,
+  defaultProps,
+}

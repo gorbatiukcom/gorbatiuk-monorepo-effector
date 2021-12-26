@@ -2,7 +2,6 @@ import { foundations } from "./foundations";
 import { components } from "./components"
 import { other } from "./other";
 import { colors, darkThemeColors } from "./foundations/colors";
-import { prepareCssVarColors } from "./theme.utils";
 
 const basicTheme = {
   ...foundations,
@@ -13,19 +12,15 @@ const basicTheme = {
 
 const lightTheme = {
   ...basicTheme,
-  rawColors: colors,
-  colors: prepareCssVarColors(colors),
+  colors,
 };
 
 const darkTheme = {
   ...basicTheme,
-  rawColors: darkThemeColors,
-  colors: prepareCssVarColors(darkThemeColors),
+  colors: darkThemeColors,
 };
 
 export const themes = {
   light: lightTheme,
   dark: darkTheme,
 };
-
-export const theme = themes.light;
